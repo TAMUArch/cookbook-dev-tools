@@ -1,4 +1,4 @@
-vagrant-cookbook Cookbook
+vagrant dev tools Cookbook
 =========================
 TODO: Enter the cookbook description here.
 
