@@ -1,0 +1,8 @@
+ # turnoff startup message
+ startup_message off
+ # use visual bell
+ vbell on
+ # set a big scrolling buffer
+ defscrollback 50000
+ # Set the caption on the bottom line
+ caption always "%{= kw}%-w%{= BW}%n %t%{-}%+w %-= @%H - %LD %d %LM - %c"

@@ -43,10 +43,14 @@ end
 
 file node[:vagrant_developer][:gitignore_destination] do
   action :create
+  owner "vagrant"
+  group "vagrant"
   source node[:vagrant_developer][:gitignore_source]
 end
 
 file node[:vagrant_developer][:screenfile_destination] do
   action :create
+  owner "vagrant"
+  group "vagrant"
   source node[:vagrant_developer][:screenfile_destination] 
 end
