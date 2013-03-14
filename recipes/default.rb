@@ -32,25 +32,24 @@ package "screen" do
   action :install
 end
 
-package "python-easyinstall" do
+package "python-pip" do
   action :install
 end
 
-package "setuptools-git" do
+easy_install_package "setuptools-git" do
   action :install
-  provider "easy_install_package"
 end
 
-file node[:vagrant_developer][:gitignore_destination] do
+cookbook_file node[:vagrant_developer][:gitignore_destination] do
   action :create
   owner "vagrant"
   group "vagrant"
   source node[:vagrant_developer][:gitignore_source]
 end
 
-file node[:vagrant_developer][:screenfile_destination] do
+cookbook_file node[:vagrant_developer][:screenfile_destination] do
   action :create
   owner "vagrant"
   group "vagrant"
-  source node[:vagrant_developer][:screenfile_destination] 
+  source node[:vagrant_developer][:screenfile_source] 
 end
