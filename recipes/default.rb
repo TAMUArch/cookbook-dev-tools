@@ -40,6 +40,14 @@ easy_install_package "setuptools-git" do
   action :install
 end
 
+cookbook_file node[:vagrant_developer][:gitconfig_destination] do
+    action :create
+    owner "vagrant"
+    group "vagrant"
+    mode "0664"
+    source node[:vagrant_developer][:gitconfig_source]
+end
+
 cookbook_file node[:vagrant_developer][:gitignore_destination] do
   action :create
   owner "vagrant"
