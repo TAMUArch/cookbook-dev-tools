@@ -61,3 +61,15 @@ cookbook_file node[:vagrant_developer][:screenfile_destination] do
   group "vagrant"
   source node[:vagrant_developer][:screenfile_source] 
 end
+
+directory "/home/vagrant/.buildout" do
+    action :create
+    owner "vagrant"
+    group "vagrant"
+    mode "0775"
+end
+
+link "/home/vagrant/.buildout/default.cfg" do
+    action :create
+    to "/var/www/.buildout/default.cfg"
+end
