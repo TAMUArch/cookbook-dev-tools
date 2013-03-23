@@ -24,16 +24,14 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 
-package "vim" do
-  action :install
-end
-
-package "screen" do
-  action :install
-end
-
-package "python-pip" do
-  action :install
+%w[
+  vim
+  screen
+  python-pip
+].each do |pkg|
+  package pkg do
+    action :install
+  end
 end
 
 easy_install_package "setuptools-git" do
