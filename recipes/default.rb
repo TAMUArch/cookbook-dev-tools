@@ -24,6 +24,8 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 
+include_recipe "nodejs::install_from_source"
+
 %w[
   vim
   screen
@@ -35,6 +37,10 @@
 end
 
 easy_install_package "setuptools-git" do
+  action :install
+end
+
+npm_package "less" do
   action :install
 end
 
