@@ -41,6 +41,7 @@ easy_install_package "setuptools-git" do
 end
 
 npm_package "less" do
+  version "1.3.3"
   action :install
 end
 
