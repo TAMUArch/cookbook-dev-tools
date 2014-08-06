@@ -24,7 +24,7 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 
-include_recipe "nodejs::nodejs"
+include_recipe "nodejs::nodejs_from_source"
 
 %w[
   vim
