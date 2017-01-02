@@ -6,5 +6,5 @@ description      'Installs/Configures vagrant-cookbook'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '14.3'
 
-depends "nodejs"
+depends "nodejs", '= 2.4.4'
 depends "npm"
